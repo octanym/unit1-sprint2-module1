@@ -58,7 +58,7 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
-   a closure is the environment surrounding a function and the variables available in that environment. the boundary of the outer environment is delimited by the end of the function itself and/or the beginning of another function within it. the surrounding environment can be defined by the scope of adefined by the boundary of the scope of the surrounding function
+   A closure is an inner functions ability to access not only the variables within its own scope but also the variables scoped to the surrounding function.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -79,8 +79,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+The closure is utilized as soon as the inner functions console log call uses the name parameter that was passed to the outer function. It is evident the closure was used because the inner function is using data that was not declared within its own scope.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+The data that remains the same among the 2 function calls is the name argument that is passed to it. The data that changes is the random value assigned to the newRoll variable, after the inner anonymous function is returned from the outer personalDice function the value of the newRoll variable is garbage collected.
 c. What is the lexical scope of `newRoll`?
+The variable newRoll is lexically scoped to the anonymous function returned from the personalDice function
 
 ### Task 3 - Stretch Goals
 
