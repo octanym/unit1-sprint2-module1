@@ -104,8 +104,6 @@ function finalScore(inning, inningsToPlay) {
   return score;
 }
 
-console.log(finalScore(inning, 9));
-
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
   1. Receive a callback function in a parameter - you will pass in the inning function from task 2 as your argument 
@@ -118,8 +116,11 @@ For example: invoking getInningScore(inning) might return this object:
 }
   */
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
+function getInningScore(inning) {
+  return {
+    Away: inning(),
+    Home: inning(),
+  };
 }
 
 /* STRETCH: ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
