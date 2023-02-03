@@ -89,9 +89,22 @@ Use the finalScore function below to do the following:
 */
 
 function finalScore(inning, inningsToPlay) {
-  // "after" each inning - when/how does an inning end
-  //when an inning ends - update the scores object
+  let score = {
+    Away: 0,
+    Home: 0,
+  };
+
+  // generate the points earned by each team in each inning and update the score object
+  for (let i = 0; i < inningsToPlay; i++) {
+    score.home += inning();
+    score.away += inning();
+  }
+
+  // when all innings are complete - return the scores object
+  return score;
 }
+
+console.log(finalScore(inning, 9));
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
